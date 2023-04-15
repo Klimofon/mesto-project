@@ -8,10 +8,9 @@
  row-gap: 20px;
 }
 
-@media screen and (max-width: 618px) {
+@media screen and (max-width: 654px) {
     .places {
         padding-left: 19px;
         padding-right: 19px;
     }
-    
 }

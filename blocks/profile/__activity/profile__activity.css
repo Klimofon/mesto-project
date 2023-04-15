@@ -8,7 +8,7 @@
     color: #FFFFFF;
 }
 
-@media screen and (max-width: 618px) {
+@media screen and (max-width: 654px) {
     .profile__activity {
         font-size: 14px;
         line-height: 17px;
