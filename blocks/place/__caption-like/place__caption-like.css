@@ -1,0 +1,19 @@
+.place__caption-like {
+    width: 22px;
+    height: 19px;
+    background-image: url(../../../images/place__caption-like.svg);
+    box-sizing: border-box;
+    transition: .5s;
+}
+
+.place__caption-like:hover {
+    background-image: url(../../../images/place__caption-like_hover.svg);
+    transition: .5s;
+    cursor: pointer;
+}
+
+.place__caption-like:active {
+    background-image: url(../../../images/place__caption-like_active.svg);
+    transition: .5s;
+    cursor: pointer;
+}

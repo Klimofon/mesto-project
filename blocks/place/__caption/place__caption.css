@@ -1,0 +1,16 @@
+.place__caption {
+    padding: 0;
+    margin: 0;
+    background-color: #fff;
+    max-width: 282px;
+    padding-top: 25px;
+    padding-bottom: 31px;
+    padding-left: 21px;
+    padding-right: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    
+}

@@ -1,0 +1,19 @@
+.footer {
+    padding-top: 66px;
+    padding-bottom: 60px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    color: #545454;
+    text-align: left;
+}
+
+@media screen and (max-width: 618px) {
+    .footer {
+        padding-left: 19px;
+        padding-right: 19px;
+        padding-top: 48px;
+        padding-bottom: 36px;
+    }
+}

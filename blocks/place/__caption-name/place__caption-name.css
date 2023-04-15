@@ -1,0 +1,15 @@
+.place__caption-name {
+    padding: 0;
+    margin: 0;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 29px;
+    color: #000000;
+    flex-grow: 1;
+    width: 224px;
+    overflow: hidden;
+    white-space: nowrap;
+    box-sizing: border-box;
+    text-overflow: ellipsis;
+}
