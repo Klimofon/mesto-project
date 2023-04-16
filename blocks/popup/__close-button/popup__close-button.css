@@ -1,0 +1,17 @@
+.popup__close-button {
+    align-content: flex-end;
+    background: url(../../../images/popup__close-button.svg);
+    background-size: cover;
+    transition: .5s;
+}
+
+.popup__close-button:hover {
+    opacity: .6;
+    transition: .5s;
+    cursor: pointer;
+}
+
+
+
+
+

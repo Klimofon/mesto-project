@@ -13,7 +13,7 @@
             <img class="header__logo" src="./images/logo.svg">
             <div class="header__line"></div>
         </header>
-        <main class="content">
+        <main>
             <section class="profile">
                 <div class="avatar">
                     <img class="avatar__image" src="./images/avatar__image.jpg">
@@ -65,6 +65,25 @@
                     <img src="./images/places/in_article_437327b816.jpg" class="place__image" alt="Порт, занесенный снегом">
                     <figcaption class="place__caption"><h3 class="place__caption-name">Зима в Салехарде</h3><span class="place__caption-like"></span></figcaption>
                 </figure>
+            </section>
+            <section class="popup popup_opened">
+                <div class="popup__container">
+                    <div></div>
+                    <div class="popup__close-button"></div>
+                    <div class="popup__form-field">
+                        <form class="form">
+                            <h2 class="form__heading">Редактировать профиль</h2>
+                            <fieldset class="form__fieldset">
+                                <input type="text" class="form__item" placeholder="Жак-Ив Кусто">
+                                <input type="text" class="form__item" placeholder="Исследователь океана">
+                            </fieldset>
+                            <fieldset class="form__fieldset">
+                                <input type="submit" class="form__button" value="Сохранить">
+                            </fieldset>
+                        </form>
+                    </div>
+                    <div></div>
+                </div>
             </section>
         </main>
         <footer class="footer">© 2020 Mesto Russia</footer>

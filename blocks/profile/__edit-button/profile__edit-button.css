@@ -7,7 +7,6 @@
     background-image: url(../../../images/profile__edit-profile.svg);
     background-repeat: no-repeat;
     background-position: center center;
-    transition: .5s;
 }
 
 .profile__edit-button:hover {
@@ -18,7 +17,6 @@
 
 @media screen and (max-width: 654px) {
     .profile__edit-button {
-        transition: .5s;
         width: 18px;
         height: 18px;
     }
