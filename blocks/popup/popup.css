@@ -11,10 +11,3 @@
     align-items: center;
     justify-content: center;
 }
-
-@media screen and (max-width: 621px) {
-    .popup {
-        padding-top: 87px;
-        justify-content: flex-start;
-    }    
-}

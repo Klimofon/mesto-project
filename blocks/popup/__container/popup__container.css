@@ -1,22 +1,17 @@
 .popup__container {
-    width: 470px;
-    display: grid;
-    grid-template-columns: 1fr 32px;
-    grid-template-rows: 32px 1fr;
-    gap: 8px;
-    grid-template-areas:
-    "header-empty-block close-button-block"
-    "main-container-block main-empty-block";
+    width: 100%;
+    max-width: 470px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: end;
+    row-gap: 8px;
 }
 
 @media screen and (max-width: 621px) {
     .popup__container {
-        width: 282px;
-        grid-template-columns: 1fr 20px;
-        grid-template-rows: 20px 1fr;
-        grid-template-areas:
-        "header-empty-block close-button-block"
-        "main-container-block main-container-block";
+        width: 100%;
+        max-width: 282px;
         row-gap: 16px;
      }
 }

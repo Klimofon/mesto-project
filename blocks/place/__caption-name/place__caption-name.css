@@ -7,7 +7,9 @@
     line-height: 29px;
     color: #000000;
     flex-grow: 1;
-    width: 224px;
+    flex-grow: 1;
+    width: 100%;
+    max-width: 224px;
     overflow: hidden;
     white-space: nowrap;
     box-sizing: border-box;

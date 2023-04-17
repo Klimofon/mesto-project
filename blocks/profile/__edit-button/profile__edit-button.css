@@ -1,9 +1,13 @@
 .profile__edit-button {
+    padding: 0;
+    margin: 0;
+    margin-left: 18px;
     display: inline-block;
     width: 24px;
     height: 24px;
     border: 1px solid #FFF;
     box-sizing: border-box;
+    background-color: #000;
     background-image: url(../../../images/profile__edit-profile.svg);
     background-repeat: no-repeat;
     background-position: center center;
@@ -17,6 +21,7 @@
 
 @media screen and (max-width: 654px) {
     .profile__edit-button {
+        margin-left: 10px;
         width: 18px;
         height: 18px;
     }

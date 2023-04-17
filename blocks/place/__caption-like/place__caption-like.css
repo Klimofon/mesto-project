@@ -1,17 +1,23 @@
 .place__caption-like {
+    padding: 0;
+    margin: 0;
+    border: 0;
     width: 22px;
     height: 19px;
+    background-color: #fff;
     background-image: url(../../../images/place__caption-like.svg);
+
     box-sizing: border-box;
 }
 
 .place__caption-like:hover {
-    background-image: url(../../../images/place__caption-like_hover.svg);
+    opacity: .5;
     transition: .5s;
     cursor: pointer;
 }
 
 .place__caption-like:active {
+    opacity: 1;
     background-image: url(../../../images/place__caption-like_active.svg);
     cursor: pointer;
 }

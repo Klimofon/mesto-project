@@ -10,83 +10,82 @@
 <body class="body">
     <div class="page">
         <header class="header">
-            <img class="header__logo" src="./images/logo.svg">
-            <div class="header__line"></div>
+            <img class="header__logo" src="./images/logo.svg" alt="Логотип, стилизованная надпись Mesto Russia">
         </header>
         <main>
             <section class="profile">
                 <div class="avatar">
-                    <img class="avatar__image" src="./images/avatar__image.jpg">
+                    <img class="avatar__image" src="./images/avatar__image.jpg" alt="Аватар профиля">
                 </div>
                 <div class="profile__info">
-                    <h1 class="profile__name">Жак-Ив <nobr>Кусто <span class="profile__edit-button"></span></nobr></h1>
-                    <h2 class="profile__activity">Исследователь океана</h2>
+                    <h1 class="profile__name">Жак-Ив Кусто Жак-Ив Кусто Жак-Ив Кусто Жак-Ив Кусто Жак-Ив Кусто Жак-Ив Кусто Жак-Ив Кусто Жак-Ив Кусто Жак-Ив Кусто<button class="profile__edit-button" type="button"></button></h1>
+                    <p class="profile__activity">Исследователь океана Исследователь океана Исследователь океана Исследователь океана Исследователь океана Исследователь океана Исследователь океана Исследователь океана Исследователь океана </p>
                 </div>
-                <div class="profile__add-button"></div>
+                <button class="profile__add-button" type="button"></button>
             </section>
-            <section class="places">
-                <!--place 1-->
-                <figure class="place">
-                    <img src="./images/places/kirill-pershin-1088404-unsplash.jpg" class="place__image" alt="Замок в горах Карачаево-Черкессии">
-                    <figcaption class="place__caption"><h3 class="place__caption-name">Карачаевск</h3><span class="place__caption-like"></span></figcaption>
-                </figure>
-                <!--place 2-->
-                <figure class="place">
-                    <img src="./images/places/kirill-pershin-1404681-unsplash.jpg" class="place__image" alt="Вид на Эльбрус">
-                    <figcaption class="place__caption"><h3 class="place__caption-name">Гора эльбрус</h3><span class="place__caption-like"></span></figcaption>
-                </figure>
-                <!--place 3-->
-                <figure class="place">
-                    <img src="./images/places/kirill-pershin-1556355-unsplash.jpg" class="place__image" alt="Лес и горы Домбая">
-                    <figcaption class="place__caption"><h3 class="place__caption-name">Домбай</h3><span class="place__caption-like"></span></figcaption>
-                </figure>
-                <!--place 4-->
-                <figure class="place">
-                    <img src="./images/places/red_square.jpeg" class="place__image" alt="Вид на Кремлевскую стену и Храм Василия Блаженного">
-                    <figcaption class="place__caption"><h3 class="place__caption-name">Москва, Красная Площадь</h3><span class="place__caption-like"></span></figcaption>
-                </figure>
-                <!--place 5-->
-                <figure class="place">
-                    <img src="./images/places/solovki.jpg" class="place__image" alt="Каменистый берег, деревянный храм">
-                    <figcaption class="place__caption"><h3 class="place__caption-name">Соловки</h3><span class="place__caption-like"></span></figcaption>
-                </figure>
-                <!--place 6-->
-                <figure class="place">
-                    <img src="./images/places/1650655130_15-sportishka-com-p-kreml-rostova-velikogo-krasivo-foto-16.jpg" class="place__image" alt="Бело-розовые стены кремля Ростова Великого (Ярославская область)">
-                    <figcaption class="place__caption"><h3 class="place__caption-name">Кремль Ростова Великого</h3><span class="place__caption-like"></span></figcaption>
-                </figure>
-                <!--place 7-->
-                <figure class="place">
-                    <img src="./images/places/Murom.jpg" class="place__image" alt="Памятник Петру и Февронии Муромским">
-                    <figcaption class="place__caption"><h3 class="place__caption-name">Муром</h3><span class="place__caption-like"></span></figcaption>
-                </figure>
-                <!--place 8-->
-                <figure class="place">
-                    <img src="./images/places/in_article_437327b816.jpg" class="place__image" alt="Порт, занесенный снегом">
-                    <figcaption class="place__caption"><h3 class="place__caption-name">Зима в Салехарде</h3><span class="place__caption-like"></span></figcaption>
-                </figure>
+            <section>
+                <ul class="places-list">
+                    <!--place 1-->
+                    <li class="place">
+                        <img src="./images/places/kirill-pershin-1088404-unsplash.jpg" class="place__image" alt="Замок в горах Карачаево-Черкессии">
+                        <div class="place__caption"><h3 class="place__caption-name">Карачаевск</h3><button class="place__caption-like" type="button"></button></div>
+                    </li>
+                    <!--place 2-->
+                    <li class="place">
+                        <img src="./images/places/kirill-pershin-1404681-unsplash.jpg" class="place__image" alt="Вид на Эльбрус">
+                        <div class="place__caption"><h3 class="place__caption-name">Гора эльбрус</h3><button class="place__caption-like" type="button"></button></div>
+                    </li>
+                    <!--place 3-->
+                    <li class="place">
+                        <img src="./images/places/kirill-pershin-1556355-unsplash.jpg" class="place__image" alt="Лес и горы Домбая">
+                        <div class="place__caption"><h3 class="place__caption-name">Домбай</h3><button class="place__caption-like" type="button"></button></div>
+                    </li>
+                    <!--place 4-->
+                    <li class="place">
+                        <img src="./images/places/red_square.jpeg" class="place__image" alt="Вид на Кремлевскую стену и Храм Василия Блаженного">
+                        <div class="place__caption"><h3 class="place__caption-name">Москва, Красная Площадь</h3><button class="place__caption-like" type="button"></button></div>
+                    </li>
+                    <!--place 5-->
+                    <li class="place">
+                        <img src="./images/places/solovki.jpg" class="place__image" alt="Каменистый берег, деревянный храм">
+                        <div class="place__caption"><h3 class="place__caption-name">Соловки</h3><button class="place__caption-like" type="button"></button></div>
+                    </li>
+                    <!--place 6-->
+                    <li class="place">
+                        <img src="./images/places/1650655130_15-sportishka-com-p-kreml-rostova-velikogo-krasivo-foto-16.jpg" class="place__image" alt="Бело-розовые стены кремля Ростова Великого (Ярославская область)">
+                        <div class="place__caption"><h3 class="place__caption-name">Кремль Ростова Великого</h3><button class="place__caption-like" type="button"></button></div>
+                    </li>
+                    <!--place 7-->
+                    <li class="place">
+                        <img src="./images/places/Murom.jpg" class="place__image" alt="Памятник Петру и Февронии Муромским">
+                        <div class="place__caption"><h3 class="place__caption-name">Муром</h3><button class="place__caption-like" type="button"></button></div>
+                    </li>
+                    <!--place 8-->
+                    <li class="place">
+                        <img src="./images/places/in_article_437327b816.jpg" class="place__image" alt="Порт, занесенный снегом">
+                        <div class="place__caption"><h3 class="place__caption-name">Зима в Салехарде</h3><button class="place__caption-like" type="button"></button></div>
+                    </li>
+                </ul>
             </section>
-            <section class="popup popup_opened">
+        </main>
+            <section class="popup ">
                 <div class="popup__container">
-                    <div></div>
-                    <div class="popup__close-button"></div>
+                    <button class="popup__close-button" type="button"></button>
                     <div class="popup__form-field">
-                        <form class="form">
+                        <form class="form" name="profile-personal-data">
                             <h2 class="form__heading">Редактировать профиль</h2>
                             <fieldset class="form__fieldset">
-                                <input type="text" class="form__item" placeholder="Жак-Ив Кусто">
-                                <input type="text" class="form__item" placeholder="Исследователь океана">
+                                <input type="text" class="form__item" name="profile-personal-data__name" placeholder="Жак-Ив Кусто">
+                                <input type="text" class="form__item" name="profile-personal-data__activity" placeholder="Исследователь океана">
                             </fieldset>
                             <fieldset class="form__fieldset">
                                 <input type="submit" class="form__button" value="Сохранить">
                             </fieldset>
                         </form>
                     </div>
-                    <div></div>
                 </div>
             </section>
-        </main>
-        <footer class="footer">© 2020 Mesto Russia</footer>
+        <footer><p class="footer">© 2020 Mesto Russia</p></footer>
     </div>
 </body>
 </html>

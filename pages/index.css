@@ -8,7 +8,6 @@
 @import url(../blocks/footer/footer.css);
 
 @import url(../blocks/header/__logo/header__logo.css);
-@import url(../blocks/header/__line/header__line.css);
 
 @import url(../blocks/profile/profile.css);
 @import url(../blocks/profile/profile__info/profile__info.css);
@@ -20,7 +19,7 @@
 @import url(../blocks/avatar/avatar.css);
 @import url(../blocks/avatar/__image/avatar__image.css);
 
-@import url(../blocks/places/places.css);
+@import url(../blocks/places-list/places-list.css);
 
 @import url(../blocks/place/place.css);
 @import url(../blocks/place/__image/place__image.css);
