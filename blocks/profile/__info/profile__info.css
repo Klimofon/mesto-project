@@ -3,6 +3,11 @@
     padding-right: 30px;
     text-align: left;
     flex-grow: 1;
+    display: grid;
+    grid-template-columns: minmax(auto, 800px) min-content;
+    grid-template-rows: min-content;
+    row-gap: 16px;
+    column-gap: 18px;
 }
 
 @media screen and (max-width: 768px) {
@@ -12,5 +17,7 @@
         text-align: center;
         padding-top: 26px;
         padding-bottom: 36px;
+        row-gap: 14px;
+        column-gap: 10px;
     }
 }
