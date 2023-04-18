@@ -13,6 +13,8 @@
 
 @media screen and (max-width: 768px) {
     .profile__activity {
+        text-align: center;
+        padding-left: 24px;
         font-size: 14px;
         line-height: 17px;
     }
