@@ -11,7 +11,7 @@
     text-align: left;
 }
 
-@media screen and (max-width: 654px) {
+@media screen and (max-width: 768px) {
     .footer {
         padding-left: 19px;
         padding-right: 19px;

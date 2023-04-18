@@ -21,7 +21,7 @@
     cursor: pointer;
 }
 
-@media screen and (max-width: 621px) {
+@media screen and (max-width: 768px) {
     .form__button {
         font-size: 14px;
         line-height: 17px;

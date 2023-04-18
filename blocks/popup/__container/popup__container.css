@@ -8,7 +8,7 @@
     row-gap: 8px;
 }
 
-@media screen and (max-width: 621px) {
+@media screen and (max-width: 768px) {
     .popup__container {
         width: 100%;
         max-width: 282px;
