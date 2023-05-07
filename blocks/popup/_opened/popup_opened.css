@@ -1,5 +1,13 @@
 .popup_opened {
     display: flex;
-    /*opacity: 1;
-    transition: 10s;*/
+    animation: fadeIn .6s;
+}
+
+@-webkit-keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+} 
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
 }
