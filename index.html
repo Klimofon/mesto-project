@@ -28,54 +28,62 @@
                     <li class="place">
                         <img src="./images/places/kirill-pershin-1088404-unsplash.jpg" class="place__image" alt="Замок в горах Карачаево-Черкессии">
                         <div class="place__caption"><h3 class="place__caption-name">Карачаевск</h3><button class="place__caption-like" type="button"></button></div>
+                        <button class="place__delete-button" type="button"></button>
                     </li>
                     <!--place 2-->
                     <li class="place">
                         <img src="./images/places/kirill-pershin-1404681-unsplash.jpg" class="place__image" alt="Вид на Эльбрус">
                         <div class="place__caption"><h3 class="place__caption-name">Гора эльбрус</h3><button class="place__caption-like" type="button"></button></div>
+                        <button class="place__delete-button" type="button"></button>
                     </li>
                     <!--place 3-->
                     <li class="place">
                         <img src="./images/places/kirill-pershin-1556355-unsplash.jpg" class="place__image" alt="Лес и горы Домбая">
                         <div class="place__caption"><h3 class="place__caption-name">Домбай</h3><button class="place__caption-like" type="button"></button></div>
+                        <button class="place__delete-button" type="button"></button>
                     </li>
                     <!--place 4-->
                     <li class="place">
                         <img src="./images/places/red_square.jpeg" class="place__image" alt="Вид на Кремлевскую стену и Храм Василия Блаженного">
                         <div class="place__caption"><h3 class="place__caption-name">Москва, Красная Площадь</h3><button class="place__caption-like" type="button"></button></div>
+                        <button class="place__delete-button" type="button"></button>
                     </li>
                     <!--place 5-->
                     <li class="place">
                         <img src="./images/places/solovki.jpg" class="place__image" alt="Каменистый берег, деревянный храм">
                         <div class="place__caption"><h3 class="place__caption-name">Соловки</h3><button class="place__caption-like" type="button"></button></div>
+                        <button class="place__delete-button" type="button"></button>
                     </li>
                     <!--place 6-->
                     <li class="place">
                         <img src="./images/places/1650655130_15-sportishka-com-p-kreml-rostova-velikogo-krasivo-foto-16.jpg" class="place__image" alt="Бело-розовые стены кремля Ростова Великого (Ярославская область)">
                         <div class="place__caption"><h3 class="place__caption-name">Кремль Ростова Великого</h3><button class="place__caption-like" type="button"></button></div>
+                        <button class="place__delete-button" type="button"></button>
                     </li>
                     <!--place 7-->
                     <li class="place">
                         <img src="./images/places/Murom.jpg" class="place__image" alt="Памятник Петру и Февронии Муромским">
                         <div class="place__caption"><h3 class="place__caption-name">Муром</h3><button class="place__caption-like" type="button"></button></div>
+                        <button class="place__delete-button" type="button"></button>
                     </li>
                     <!--place 8-->
                     <li class="place">
                         <img src="./images/places/in_article_437327b816.jpg" class="place__image" alt="Порт, занесенный снегом">
                         <div class="place__caption"><h3 class="place__caption-name">Зима в Салехарде</h3><button class="place__caption-like" type="button"></button></div>
+                        <button class="place__delete-button" type="button"></button>
                     </li>
                 </ul>
             </section>
         </main>
-            <section class="popup">
+            <section class="popup popup_content-type_form">
                 <div class="popup__container">
                     <button class="popup__close-button" type="button"></button>
                     <div class="popup__form-field">
                         <form class="form" name="profile-personal-data" id="profile-personal-data">
                             <h2 class="form__heading">Редактировать профиль</h2>
                             <fieldset class="form__fieldset">
-                                <input type="text" class="form__item profile-personal-data__name" name="profile-personal-data__name" placeholder="Жак-Ив Кусто" value="">
-                                <input type="text" class="form__item profile-personal-data__activity" name="profile-personal-data__activity" placeholder="Исследователь океана">
+                                <input type="text" class="form__item profile-personal-data__name" name="profile-personal-data__name" placeholder="Как Вас зовут?" value="">
+                                <input type="text" class="form__item profile-personal-data__activity" name="profile-personal-data__activity" placeholder="Чем занимаетесь?">
                             </fieldset>
                             <fieldset class="form__fieldset">
                                 <input type="submit" class="form__button" value="Сохранить">
@@ -84,7 +92,7 @@
                     </div>
                 </div>
             </section>
-            <section class="popup" id="new-card-section">
+            <section class="popup popup_content-type_form" id="new-card-section">
                 <div class="popup__container">
                     <button class="popup__close-button" type="button"></button>
                     <div class="popup__form-field">
@@ -101,12 +109,20 @@
                     </div>
                 </div>
             </section>
+            <section class="popup popup_content-type_image" id="image-popup-section">
+                <div class="popup__image-container">
+                    <button class="popup__close-button" type="button"></button>
+                    <img class="popup__image" src="./images/places/in_article_437327b816.jpg">
+                    <p class="popup__image-caption">123</p>
+                </div>
+            </section>
         <footer><p class="footer">© 2020 Mesto Russia</p></footer>
     </div>
     <template id="card-template">
         <li class="place">
             <img src="./images/places/in_article_437327b816.jpg" class="place__image" alt="Порт, занесенный снегом">
             <div class="place__caption"><h3 class="place__caption-name">Зима в Салехарде</h3><button class="place__caption-like" type="button"></button></div>
+            <button class="place__delete-button" type="button"></button>
         </li>
     </template>
     <script src="./vendor/script.js"></script>
