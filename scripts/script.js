@@ -29,7 +29,6 @@ const cardsArray = [
 
 function openPopup (selector) {
     document.querySelector(selector).classList.add('popup_opened');
-    console.log(selector);
 }
 
 function closePopup (obj) {
@@ -54,10 +53,11 @@ function addNewProfileData(evt) {
     const mewProfileActivity = document.querySelector('.profilePopup .profile-personal-data__activity').value;
     document.querySelector('.profile__name').textContent = newProfileName;
     document.querySelector('.profile__activity').textContent = mewProfileActivity;
+    closePopup(profilePopup);
 }
 
 function createCard(placeName, photoHref) {
-    const cardClone = cardTemplate.querySelector('.place').cloneNode(true);
+    cardClone = cardTemplate.querySelector('.place').cloneNode(true);
     cardClone.querySelector('.place__image').src = photoHref;
     cardClone.querySelector('.place__image').alt = 'Изображение места с названием ' + placeName;
     cardClone.querySelector('.place__caption-name').textContent = placeName;
@@ -69,22 +69,22 @@ function createCard(placeName, photoHref) {
     //
 }
 
-function addCard(cardClone) {
-    cardContainer.prepend(cardClone);
-}
-
 function getNewCard(evt) {
     evt.preventDefault();
     const newPlaceName = cardForm.querySelector('.new-card-name').value;
     const newPhotoHref = cardForm.querySelector('.new-card-url').value;
         if (newPlaceName.length >= 2 && newPhotoHref.length >=  5) {
 
-        cardClone = createCard(newPlaceName, newPhotoHref);
+        const cardClone = createCard(newPlaceName, newPhotoHref);
         addCard(cardClone);
         closePopup(cardPopup);
         cardForm.querySelector('.new-card-name').value = '';
         cardForm.querySelector('.new-card-url').value = '';
         }
+}
+
+function addCard(cardClone) {
+    cardContainer.prepend(cardClone);
 }
 
 function deleteCard(evt) {
@@ -95,37 +95,6 @@ function toggleLike(evt) {
     evt.target.classList.toggle('place__caption-like_selected');
 }
 
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-const profileEditButton = document.querySelector('.profile__edit-button');
-    profileEditButton.addEventListener('click', openProfilePopup);
-
-const cardAddButton = document.querySelector('.profile__add-button');
-    cardAddButton.addEventListener('click', openCardAddPopup);
-
-const popupCloseButtons = document.querySelectorAll('.popup__close-button');
-    popupCloseButtons.forEach((button) => {
-        const popup = button.closest('.popup');
-        button.addEventListener('click', () => closePopup(popup));
-    })
-
-const profileSubmit = document.querySelector('.profilePopup .form');
-    profileSubmit.addEventListener('submit', addNewProfileData);
-
-const cardTemplate = document.querySelector('#card-template').content;
-const cardContainer = document.querySelector('.places-list');
-
-cardsArray.forEach(function (item) {
-    const placeName = item['name'];
-    const photoHref = item['link'];
-    cardClone = createCard(placeName, photoHref);
-    addCard(cardClone);
-});
-
-const cardPopup = document.querySelector('.cardAddPopup');
-const cardForm = cardPopup.querySelector('.form');
-    cardForm.addEventListener('click', getNewCard);
-
 function openImagePopup(evt) {
     
     const imageSource = evt.target.src;
@@ -134,3 +103,35 @@ function openImagePopup(evt) {
     document.querySelector('.popup__image-caption').textContent = imageCaption;
     openPopup('.image-popup');
 }
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+const profileEditButton = document.querySelector('.profile__edit-button');
+    profileEditButton.addEventListener('click', openProfilePopup);
+
+const cardAddButton = document.querySelector('.profile__add-button');
+    cardAddButton.addEventListener('click', openCardAddPopup);
+
+const profilePopup = document.querySelector('.profilePopup');
+const profileForm = document.forms['profile-personal-data'];
+    profileForm.addEventListener('submit', addNewProfileData);
+
+const cardPopup = document.querySelector('.cardAddPopup');
+const cardForm = document.forms['new-card-data'];
+    cardForm.addEventListener('click', getNewCard);
+    
+const popupCloseButtons = document.querySelectorAll('.popup__close-button');
+    popupCloseButtons.forEach((button) => {
+        const popup = button.closest('.popup');
+        button.addEventListener('click', () => closePopup(popup));
+    })
+
+const cardTemplate = document.querySelector('#card-template').content;
+const cardContainer = document.querySelector('.places-list');
+
+cardsArray.forEach(function (item) {
+    const placeName = item['name'];
+    const photoHref = item['link'];
+    let cardClone = createCard(placeName, photoHref);
+    addCard(cardClone);
+});
