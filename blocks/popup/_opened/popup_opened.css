@@ -1,0 +1,10 @@
+.popup_opened {
+        animation: fadeIn .6s linear;
+        visibility: visible;
+        opacity: 1;
+}
+    
+@keyframes fadeIn {
+        from {opacity: 0;}
+        to {opacity: 1;}
+} 

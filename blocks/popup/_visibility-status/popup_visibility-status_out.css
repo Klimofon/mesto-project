@@ -1,8 +1,0 @@
-.popup_visibility-status_out {
-    animation: fadeOut .6s linear;
-}
-
-@keyframes fadeOut {
-        from {opacity: 1; visibility: visible;}
-        to {opacity: 0; visibility: hidden;}
-} 
