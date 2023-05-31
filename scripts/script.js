@@ -122,6 +122,28 @@ function toggleLike(evt) {
     evt.target.classList.toggle('place__caption-like_selected');
 }
 
+function addFormsFieldsListeners() {
+    const formSet = Array.from(document.querySelectorAll('.form'));
+    //console.log(formSet);
+    formSet.forEach(function (form) {
+        const fieldsInputSet = Array.from(form.querySelectorAll('.form__item'));
+        //console.log(fieldsInputSet);
+        fieldsInputSet.forEach(function (field) {
+            //console.log(field);
+            field.addEventListener('input', () => validateForm(field));
+        })
+    })
+}
+
+addFormsFieldsListeners();
+
+function validateForm(field) {
+    
+    const errorMessage = 'передал ' + field.name + field.value + field.validationMessage;
+    console.log(errorMessage);
+    
+}
+
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 profileForm.addEventListener('submit', addNewProfileData);
