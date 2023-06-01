@@ -122,7 +122,33 @@ function toggleLike(evt) {
     evt.target.classList.toggle('place__caption-like_selected');
 }
 
-function addFormsFieldsListeners() {
+function showError(field) {
+    let errorRegexpMessage = "";
+    const errorBrowserMessage = field.validationMessage;
+    if (field.validity.patternMismatch) {errorRegexpMessage = field.dataset.errorMessage;} 
+    const errorMessage = errorBrowserMessage + errorRegexpMessage; 
+    console.log(errorMessage);
+    //console.log(field.form.id);
+}
+
+function validateForm(field) {
+    const form = document.querySelector('#' + field.form.id);
+    const fieldsInputSet = Array.from(form.querySelectorAll('.form__item'));
+    const formInvalid = fieldsInputSet.some(function (field) {
+        //console.log(field.validity.valid);
+        return field.validity.valid !== true;
+    })
+    console.log('Она неправильная:' + formInvalid);
+    if (formInvalid === true) {
+        showError(field);
+    } else {
+        console.log('Включаем кнопку сабмит');
+    }
+    //console.log(fieldsInputSet);
+    //console.log(form);
+}
+
+function enableValidation() {
     const formSet = Array.from(document.querySelectorAll('.form'));
     //console.log(formSet);
     formSet.forEach(function (form) {
@@ -133,15 +159,6 @@ function addFormsFieldsListeners() {
             field.addEventListener('input', () => validateForm(field));
         })
     })
-}
-
-addFormsFieldsListeners();
-
-function validateForm(field) {
-    
-    const errorMessage = 'передал ' + field.name + field.value + field.validationMessage;
-    console.log(errorMessage);
-    
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -161,3 +178,5 @@ cardsArray.forEach(function (item) {
     const cardClone = createCard(placeName, photoHref);
     addCard(cardClone);
 });
+
+enableValidation();
